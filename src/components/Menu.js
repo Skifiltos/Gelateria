@@ -59,7 +59,7 @@ const Menu = () =>
                   const response = await axios.get(url);
                   setProdotti(response.data.data);
                   setFilterProducts(response.data.data);
-
+                  console.log(response.data.data.default);
 
                   // Categorie Array
                   const nuoveCategorie = Array.from(
