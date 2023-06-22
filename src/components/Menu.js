@@ -59,7 +59,7 @@ const Menu = () =>
                   const response = await axios.get(url);
                   setProdotti(response.data.data);
                   setFilterProducts(response.data.data);
-                  console.log(response.data.data.default);
+                  console.log(response.data.data);
 
                   // Categorie Array
                   const nuoveCategorie = Array.from(
@@ -68,10 +68,10 @@ const Menu = () =>
 
                   nuoveCategorie.unshift("all");
 
-
                   setCategorie(nuoveCategorie);
                   
                   setIsLoading(false);
+
                   setIsError(false);
                 }
                 catch (error) 
